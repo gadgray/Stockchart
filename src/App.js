@@ -1,22 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import './App.css';
+import 'bootstrap/dist/css/bootstrap.css'
+import DetailsRoute from './pages/Details';
+import StockOverview  from './pages/StockOverview'
+import {Routes, Route } from 'react-router-dom';
+import { WatchListContextProvider } from './context/WatchListContext';
 function App() {
+  
   return (
-    <div className="App">
+    <div className="container-fluid m-3">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <WatchListContextProvider>
+      <Routes >
+        <Route path='/' element= {<StockOverview />} />
+
+        <Route path='/details/:symbol'>
+          <Route index element={<DetailsRoute />} />
+        </Route>
+      </Routes>
+      </WatchListContextProvider>
+      
+       
+      
       </header>
     </div>
   );
