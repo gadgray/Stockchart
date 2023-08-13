@@ -1,7 +1,7 @@
 {
   "name": "stock-app",
   "version": "0.1.0",
-  "homepage": "https://gadgray.github.io/stock_app",
+  "homepage": "https://gadgray.github.com/stock_app",
   "private": true,
   "dependencies": {
     "apexcharts": "^3.41.1",
