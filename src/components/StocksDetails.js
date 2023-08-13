@@ -1,34 +1,10 @@
-import { useState, useEffect, useContext } from "react"
-import FinhubApi from "../api/Finhub.api"
+import { useContext } from "react"
+// import FinhubApi from "../api/Finhub.api"
 import { StockContext } from "../context/StockDetailsContext"
 
 function StocksDetails ({symbol}){
 
     const {stockData} = useContext(StockContext)
-    // useEffect(()=>{
-    //     let isMounted = true
-    //     async function fetchData(){
-    //         try {
-                
-    //             const response = await FinhubApi.get('/stock/profile2', {
-    //                 params: {
-    //                     symbol
-    //                 }
-    //             })
-    //             if(isMounted){
-    //                 console.log(response.data)
-    //                 setStockdata(response.data)
-    //             }
-    //         } catch (error) {
-                
-    //         }
-    //     }
-
-    //     fetchData()
-    //     return ()=> (isMounted = false)
-
-    // },[symbol])
-
     return(<div className="my-5 container-fluid mx-auto ">
         {stockData && (
             <div className="row "> 
