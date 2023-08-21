@@ -1,5 +1,5 @@
 // import './App.css';
-import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap/dist/css/bootstrap.css'
 import DetailsRoute from './pages/Details';
 import StockOverview  from './pages/StockOverview'
 import {Routes, Route } from 'react-router-dom';
