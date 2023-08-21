@@ -1,5 +1,3 @@
-// import './App.css';
-// import 'bootstrap/dist/css/bootstrap.css'
 import DetailsRoute from './pages/Details';
 import StockOverview  from './pages/StockOverview'
 import {Routes, Route } from 'react-router-dom';
@@ -11,8 +9,9 @@ function App() {
       <header className="App-header">
       <WatchListContextProvider>
       <Routes >
-        <Route path='/' element= {<StockOverview />} />
-
+        <Route path='/' element= {<StockOverview />} >
+        </Route>
+        
         <Route path='/details/:symbol'>
           <Route index element={<DetailsRoute />} />
         </Route>
